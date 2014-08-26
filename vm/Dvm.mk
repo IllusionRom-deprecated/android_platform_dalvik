@@ -264,10 +264,9 @@ ifeq ($(dvm_arch),arm)
 		compiler/template/out/CompilerTemplateAsm-$(dvm_arch_variant).S
   endif
 
-  ifeq ($(WITH_QC_PERF),true)
+  ifeq ($(BOARD_USES_QCOM_HARDWARE),true)
     LOCAL_WHOLE_STATIC_LIBRARIES += libqc-dalvik
     LOCAL_SHARED_LIBRARIES += libqc-opt
-    LOCAL_CFLAGS += -DWITH_QC_PERF
   endif
 endif
 
